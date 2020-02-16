@@ -39,7 +39,7 @@ Use [docker](https://www.docker.com)
 
 ## INSTALL
 
-```docker run -ti --rm --name hashid alexandreoda/hashid```
+```docker run -ti --rm --name hashid -v ${HOME}:/home/hashid alexandreoda/hashid```
 
 
 ## LICENSE

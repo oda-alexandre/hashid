@@ -10,9 +10,11 @@ RUN echo -e '\033[36;1m ******* INSTALL PACKAGES ******** \033[0m' && \
   apt-get update && apt-get install --no-install-recommends -y \
   ca-certificates \
   sudo \
-  python
+  python3 \
+  python3-setuptools
 
 RUN echo -e '\033[36;1m ******* INSTALL PACKAGES ******** \033[0m' && \
+  sudo easy_install3 pip && \
   pip install hashid
 
 RUN echo -e '\033[36;1m ******* CLEANING ******** \033[0m' && \
