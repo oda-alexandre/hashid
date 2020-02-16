@@ -2,9 +2,12 @@ FROM debian:stretch-slim
 
 LABEL authors https://www.oda-alexandre.com
 
-ENV USER=hashid
-ENV HOME=/home/${USER}
-ENV DEBIAN_FRONTEND=noninteractive
+ENV USER hashid
+ENV HOME /home/${USER}
+ENV DEBIAN_FRONTEND noninteractive
+
+RUN echo -e '\033[36;1m ******* TEST USER VARIABLE ******** \033[0m' && \ 
+  echo ${USER}
 
 RUN echo -e '\033[36;1m ******* INSTALL PACKAGES ******** \033[0m' && \
   apt-get update && apt-get install --no-install-recommends -y \
