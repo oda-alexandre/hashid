@@ -29,10 +29,10 @@ RUN echo -e '\033[36;1m ******* ADD USER ******** \033[0m' && \
   adduser ${USER} sudo
 
 RUN echo -e '\033[36;1m ******* SELECT USER ******** \033[0m'
-USER ${USER}
+USER hashid
 
 RUN echo -e '\033[36;1m ******* SELECT WORKING SPACE ******** \033[0m'
-WORKDIR ${HOME}
+WORKDIR /home/hashid
 
 RUN echo -e '\033[36;1m ******* CONTAINER START COMMAND ******** \033[0m'
 CMD /bin/bash \
