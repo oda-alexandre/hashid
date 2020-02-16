@@ -2,7 +2,7 @@ FROM python
 
 LABEL authors https://www.oda-alexandre.com
 
-ENV USER hashident
+ENV USER hashid
 ENV HOME /home/${USER}
 ENV DEBIAN_FRONTEND noninteractive
 
