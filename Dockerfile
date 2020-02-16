@@ -6,9 +6,6 @@ ENV USER hashid
 ENV HOME /home/${USER}
 ENV DEBIAN_FRONTEND noninteractive
 
-RUN echo -e '\033[36;1m ******* TEST USER VARIABLE ******** \033[0m' && \ 
-  echo ${USER}
-
 RUN echo -e '\033[36;1m ******* INSTALL PACKAGES ******** \033[0m' && \
   apt-get update && apt-get install --no-install-recommends -y \
   ca-certificates \
@@ -31,8 +28,8 @@ RUN echo -e '\033[36;1m ******* ADD USER ******** \033[0m' && \
   passwd -d ${USER} && \
   adduser ${USER} sudo
 
-RUN echo -e '\033[36;1m ******* SELECT USER ******** \033[0m'
-USER ${USER}
+# RUN echo -e '\033[36;1m ******* SELECT USER ******** \033[0m'
+# USER ${USER}
 
 RUN echo -e '\033[36;1m ******* SELECT WORKING SPACE ******** \033[0m'
 WORKDIR ${HOME}
