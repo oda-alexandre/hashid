@@ -13,7 +13,7 @@ RUN echo -e '\033[36;1m ******* INSTALL PACKAGES ******** \033[0m' && \
   python3 \
   python3-setuptools
 
-RUN echo -e '\033[36;1m ******* INSTALL PACKAGES ******** \033[0m' && \
+RUN echo -e '\033[36;1m ******* INSTALL APP ******** \033[0m' && \
   easy_install3 pip && \
   pip install hashid
 
