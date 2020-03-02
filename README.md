@@ -1,6 +1,5 @@
 # HASHID
 
-
 ## INDEX
 
 - [HASHID](#hashid)
@@ -12,16 +11,13 @@
   - [INSTALL](#install)
   - [LICENSE](#license)
 
-
 ## BADGES
 
 [![pipeline status](https://gitlab.com/oda-alexandre/hashid/badges/master/pipeline.svg)](https://gitlab.com/oda-alexandre/hashid/commits/master)
 
-
 ## FIRST UPDATE
 
 Date: 01-01-01
-
 
 ## INTRODUCTION
 
@@ -37,16 +33,13 @@ Automatically updated on :
 
 - [docker hub public](https://hub.docker.com/r/alexandreoda/hashid)
 
-
 ## PREREQUISITES
 
 Use [docker](https://www.docker.com)
 
-
 ## INSTALL
 
 ```docker run -ti --rm --name hashid -v ${HOME}:/home/hashid alexandreoda/hashid```
-
 
 ## LICENSE
 
