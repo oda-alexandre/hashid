@@ -11,14 +11,15 @@ RUN echo -e '\033[36;1m ******* INSTALL PACKAGES ******** \033[0m' && \
   ca-certificates \
   sudo \
   python3 \
-  python3-setuptools
-
-RUN echo -e '\033[36;1m ******* INSTALL APP ******** \033[0m' && \
+  python3-setuptools \
+  && \
+  echo -e '\033[36;1m ******* INSTALL APP ******** \033[0m' && \
   easy_install3 pip && \
-  pip install hashid
-
-RUN echo -e '\033[36;1m ******* CLEANING ******** \033[0m' && \
+  pip install hashid \
+  && \
+  echo -e '\033[36;1m ******* CLEANING ******** \033[0m' && \
   apt-get --purge autoremove -y && \
+  apt-get autoclean -y && \
   rm /etc/apt/sources.list && \
   rm -rf /var/cache/apt/archives/* && \
   rm -rf /var/lib/apt/lists/*
