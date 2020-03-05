@@ -38,7 +38,8 @@ Use [docker](https://www.docker.com)
 
 ### DOCKER RUN
 
-```docker run -ti --rm --name hashid -v ${HOME}:/home/hashid alexandreoda/hashid
+```\
+docker  run -ti --rm --name hashid -v ${HOME}:/home/hashid alexandreoda/hashid
 ```
 
 ### DOCKER COMPOSE
