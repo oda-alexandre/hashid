@@ -1,0 +1,11 @@
+version: "3.7"
+
+services:
+  hashid:
+    container_name: hashid
+    image: alexandreoda/hashid
+    restart: no
+    network_mode: none
+    privileged: false
+    volumes:
+      - "${HOME}:/home/hashid"
