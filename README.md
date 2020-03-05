@@ -8,6 +8,8 @@
   - [INTRODUCTION](#introduction)
   - [PREREQUISITES](#prerequisites)
   - [INSTALL](#install)
+    - [DOCKER RUN](#docker-run)
+    - [DOCKER COMPOSE](#docker-compose)
   - [LICENSE](#license)
 
 ## BADGES
@@ -22,7 +24,7 @@ Docker image of :
 
 Continuous integration on :
 
-- [gitlab](https://gitlab.com/oda-alexandre/hashid/pipelines)
+- [gitlab pipelines](https://gitlab.com/oda-alexandre/hashid/pipelines)
 
 Automatically updated on :
 
@@ -34,7 +36,26 @@ Use [docker](https://www.docker.com)
 
 ## INSTALL
 
-```docker run -ti --rm --name hashid -v ${HOME}:/home/hashid alexandreoda/hashid```
+### DOCKER RUN
+
+```docker run -ti --rm --name hashid -v ${HOME}:/home/hashid alexandreoda/hashid
+```
+
+### DOCKER COMPOSE
+
+```yml
+version: "3.7"
+
+services:
+  hashid:
+    container_name: hashid
+    image: alexandreoda/hashid
+    restart: no
+    network_mode: none
+    privileged: false
+    volumes:
+      - "${HOME}:/home/hashid"
+```
 
 ## LICENSE
 
